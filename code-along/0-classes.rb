@@ -4,5 +4,21 @@
 # rails runner code-along/0-classes.rb
 
 # String Class
+favorite_food = "tacos"
+bens_favorite_food = "kale"
 
 # String Methods
+puts favorite_food.class
+puts bens_favorite_food.class
+puts favorite_food.upcase
+puts bens_favorite_food.upcase
+
+class Dog < Hash
+    def speak
+        "woof"
+    end 
+end
+my_dog = Dog.new
+my_dog["name"] = "jenkins"
+puts "my name is #{my_dog["name"]}"
+puts my_dog.speak

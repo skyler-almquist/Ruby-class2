@@ -35,3 +35,22 @@ Salesperson.destroy_all
 # Salespeople: 2
 # Ben Block
 # Brian Eng
+
+ben_block = Salesperson.new
+ben_block ["first_name"] = "Bn"
+ben_block ["last_name"] = "Block"
+ben_block ["email"] = "ben.block@gmail.com"
+ben_block.save
+
+brian_eng = Salesperson.new
+brian_eng ["first_name"] = "Brian"
+brian_eng ["last_name"] = "Eng"
+brian_eng ["email"] = "brian.eng@gmail.com"
+brian_eng.save
+
+puts "Salesperson(s): #{Salesperson.all.count}"
+ben_block.first_name = "Ben"
+ben_block.save
+for p in Salesperson.all 
+    puts "#{p.first_name} #{p.last_name}"
+end
